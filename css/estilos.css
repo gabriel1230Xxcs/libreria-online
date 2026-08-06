@@ -1,0 +1,1651 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8fafc;
+    color: #101828;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    padding: 18px 0;
+    background: #101828 !important;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white !important;
+}
+
+.navbar-brand span {
+    color: #f4b942;
+}
+
+.navbar .nav-link {
+    color: #d0d5dd !important;
+    font-weight: 600;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: white !important;
+}
+
+
+/* =====================================================
+   PORTADA - INICIO
+===================================================== */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(16, 24, 40, 0.97),
+            rgba(41, 56, 79, 0.93)
+        );
+}
+
+.hero::after {
+    content: "📚";
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 250px;
+    opacity: 0.08;
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.hero-etiqueta {
+    display: inline-block;
+    background: rgba(244, 185, 66, 0.15);
+    color: #f4b942;
+    border: 1px solid rgba(244, 185, 66, 0.35);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #f4b942;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #d0d5dd;
+    line-height: 1.8;
+    max-width: 620px;
+}
+
+.botones-hero {
+    margin-top: 32px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: #f4b942;
+    color: #101828;
+    border: none;
+    padding: 13px 27px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    background: #ffc857;
+    color: #101828;
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    display: inline-block;
+    border: 1px solid #667085;
+    color: white;
+    padding: 13px 27px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background: white;
+    color: #101828;
+}
+
+
+/* =====================================================
+   SECCIÓN EXPLORAR - INICIO
+===================================================== */
+
+.seccion-explorar {
+    padding: 90px 0;
+    background: white;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo-seccion span {
+    color: #b7791f;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #101828;
+    margin-top: 8px;
+}
+
+.titulo-seccion p {
+    color: #667085;
+    max-width: 600px;
+    margin: 12px auto 0;
+}
+
+
+/* =====================================================
+   TARJETAS DEL INICIO
+===================================================== */
+
+.tarjeta-servicio {
+    background: white;
+    border: 1px solid #eaecf0;
+    border-radius: 16px;
+    padding: 35px;
+    height: 100%;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(16, 24, 40, 0.05);
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(16, 24, 40, 0.12);
+}
+
+.icono-servicio {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff7e6;
+    border-radius: 14px;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.tarjeta-servicio h3 {
+    color: #101828;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.tarjeta-servicio p {
+    color: #667085;
+    line-height: 1.7;
+    margin: 15px 0 22px;
+}
+
+.enlace-tarjeta {
+    color: #b7791f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enlace-tarjeta:hover {
+    color: #805500;
+}
+
+
+/* =====================================================
+   FRANJA INFORMATIVA
+===================================================== */
+
+.franja {
+    background: #f9fafb;
+    padding: 65px 0;
+    border-top: 1px solid #eaecf0;
+}
+
+.dato {
+    text-align: center;
+}
+
+.dato h3 {
+    color: #101828;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.dato p {
+    color: #667085;
+    margin: 0;
+}
+
+
+/* =====================================================
+   ENCABEZADO PÁGINAS INTERNAS
+===================================================== */
+
+.encabezado-pagina {
+    padding: 70px 0 65px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(244, 185, 66, 0.15),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2f7
+        );
+
+    border-bottom: 1px solid #e4e7ec;
+}
+
+.subtitulo-pagina {
+    display: inline-block;
+    color: #b7791f;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.encabezado-pagina h1 {
+    color: #101828;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.encabezado-pagina p {
+    color: #667085;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+
+/* =====================================================
+   PÁGINA DE LIBROS
+===================================================== */
+
+.seccion-libros {
+    background: #f5f7fa;
+    padding: 70px 0 100px;
+    min-height: 700px;
+}
+
+
+/* =====================================================
+   TÍTULO CATÁLOGO Y BUSCADOR
+===================================================== */
+
+.barra-resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.barra-resultados h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #101828;
+    margin-bottom: 7px;
+}
+
+.barra-resultados p {
+    color: #667085;
+    margin: 0;
+}
+
+.barra-resultados p strong {
+    color: #b7791f;
+}
+
+.buscador-libros {
+    width: 420px;
+    max-width: 100%;
+}
+
+.buscador-libros input {
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+
+    background: white;
+
+    border: 1px solid #d0d5dd;
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    box-shadow: 0 4px 15px rgba(16, 24, 40, 0.05);
+
+    transition: 0.3s;
+}
+
+.buscador-libros input:focus {
+    border-color: #f4b942;
+
+    box-shadow:
+        0 0 0 4px rgba(244, 185, 66, 0.15),
+        0 5px 20px rgba(16, 24, 40, 0.08);
+
+    outline: none;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE CADA LIBRO
+===================================================== */
+
+.tarjeta-libro-contenedor {
+    display: flex;
+}
+
+
+/* =====================================================
+   TARJETA DE LIBRO
+===================================================== */
+
+.tarjeta-libro {
+    width: 100%;
+    height: 100%;
+
+    background: white;
+
+    border: 1px solid #e4e7ec;
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 10px rgba(16, 24, 40, 0.04),
+        0 10px 25px rgba(16, 24, 40, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta-libro:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(16, 24, 40, 0.10),
+        0 22px 45px rgba(16, 24, 40, 0.13);
+}
+
+
+/* =====================================================
+   PARTE SUPERIOR TARJETA
+===================================================== */
+
+.libro-superior {
+    position: relative;
+
+    height: 175px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(244, 185, 66, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #101828 0%,
+            #1d2939 55%,
+            #29384f 100%
+        );
+
+    overflow: hidden;
+}
+
+.libro-superior::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    right: -65px;
+    bottom: -80px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 50%;
+}
+
+.libro-superior::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -35px;
+    top: -35px;
+
+    background: rgba(244, 185, 66, 0.05);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   ICONO DEL LIBRO
+===================================================== */
+
+.icono-libro {
+    position: relative;
+    z-index: 2;
+
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(244, 185, 66, 0.25);
+
+    border-radius: 20px;
+
+    font-size: 43px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+
+    transition: 0.3s;
+}
+
+.tarjeta-libro:hover .icono-libro {
+    transform: translateY(-5px) scale(1.08) rotate(-3deg);
+}
+
+
+/* =====================================================
+   CATEGORÍA
+===================================================== */
+
+.tipo-libro {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    z-index: 3;
+
+    background: #f4b942;
+    color: #101828;
+
+    padding: 7px 13px;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   CONTENIDO TARJETA
+===================================================== */
+
+.contenido-libro {
+    padding: 26px;
+}
+
+.nombre-libro {
+    color: #101828;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    min-height: 70px;
+
+    margin: 0 0 18px;
+}
+
+
+/* =====================================================
+   PRECIO Y VENTAS
+===================================================== */
+
+.informacion-libro {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    padding: 17px 0;
+
+    margin-bottom: 17px;
+
+    border-top: 1px solid #eaecf0;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.informacion-libro > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.informacion-libro > div:first-child {
+    border-right: 1px solid #eaecf0;
+}
+
+.informacion-libro span {
+    color: #98a2b3;
+
+    font-size: 0.73rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+
+    margin-bottom: 5px;
+}
+
+.informacion-libro strong {
+    color: #101828;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.informacion-libro > div:first-child strong {
+    color: #b7791f;
+}
+
+
+/* =====================================================
+   FECHA
+===================================================== */
+
+.fecha-libro {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #667085;
+
+    font-size: 0.88rem;
+
+    background: #f9fafb;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   SIN RESULTADOS
+===================================================== */
+
+#sinResultados {
+    background: white;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 18px;
+
+    padding: 60px 20px !important;
+
+    margin-top: 30px;
+
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.06);
+}
+
+#sinResultados h3 {
+    color: #101828;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #101828;
+    color: #98a2b3;
+    padding: 35px 0;
+}
+
+footer strong {
+    color: white;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar .nav-link {
+        margin-left: 0;
+        padding-top: 12px;
+    }
+
+    .hero {
+        min-height: 520px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero::after {
+        display: none;
+    }
+
+    .botones-hero {
+        justify-content: center;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 2rem;
+    }
+
+    .encabezado-pagina {
+        padding: 45px 15px;
+    }
+
+    .encabezado-pagina h1 {
+        font-size: 2.2rem;
+    }
+
+    .seccion-libros {
+        padding: 45px 0 70px;
+    }
+
+    .barra-resultados {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .buscador-libros {
+        width: 100%;
+    }
+
+    .nombre-libro {
+        min-height: auto;
+    }
+}
+/* =====================================================
+   ARREGLO DEFINITIVO - TARJETAS DE LIBROS
+===================================================== */
+
+#listaLibros {
+    margin-top: 10px;
+}
+
+#listaLibros .tarjeta-libro-contenedor {
+    display: flex !important;
+    margin-bottom: 25px;
+}
+
+#listaLibros .tarjeta-libro {
+    display: block !important;
+    width: 100% !important;
+    min-height: 430px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e4e7ec !important;
+    border-radius: 20px !important;
+
+    overflow: hidden !important;
+
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.10) !important;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#listaLibros .tarjeta-libro:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.18) !important;
+}
+
+
+/* PARTE OSCURA DE ARRIBA */
+
+#listaLibros .libro-superior {
+    position: relative !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    height: 180px !important;
+
+    padding: 25px !important;
+
+    background: linear-gradient(
+        135deg,
+        #101828 0%,
+        #1d2939 55%,
+        #344054 100%
+    ) !important;
+
+    overflow: hidden !important;
+}
+
+
+/* DECORACIÓN */
+
+#listaLibros .libro-superior::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: 160px !important;
+    height: 160px !important;
+
+    border-radius: 50% !important;
+
+    background: rgba(244, 185, 66, 0.08) !important;
+
+    right: -50px !important;
+    bottom: -80px !important;
+}
+
+
+/* ICONO GRANDE */
+
+#listaLibros .icono-libro {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 90px !important;
+    height: 90px !important;
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    border: 1px solid rgba(244, 185, 66, 0.35) !important;
+    border-radius: 22px !important;
+
+    font-size: 45px !important;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20) !important;
+}
+
+
+/* CATEGORÍA */
+
+#listaLibros .tipo-libro {
+    position: absolute !important;
+
+    top: 18px !important;
+    right: 18px !important;
+
+    z-index: 5 !important;
+
+    display: inline-block !important;
+
+    background: #f4b942 !important;
+    color: #101828 !important;
+
+    padding: 7px 14px !important;
+
+    border-radius: 30px !important;
+
+    font-size: 11px !important;
+    font-weight: 800 !important;
+
+    text-transform: uppercase !important;
+}
+
+
+/* CONTENIDO */
+
+#listaLibros .contenido-libro {
+    display: block !important;
+
+    padding: 25px !important;
+
+    background: #ffffff !important;
+}
+
+
+/* NOMBRE DEL LIBRO */
+
+#listaLibros .nombre-libro {
+    display: block !important;
+
+    color: #101828 !important;
+
+    font-size: 21px !important;
+    font-weight: 800 !important;
+
+    line-height: 1.35 !important;
+
+    margin: 0 0 20px !important;
+
+    min-height: 58px !important;
+}
+
+
+/* PRECIO Y VENTAS */
+
+#listaLibros .informacion-libro {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 15px !important;
+
+    padding: 16px 0 !important;
+
+    margin-bottom: 18px !important;
+
+    border-top: 1px solid #eaecf0 !important;
+    border-bottom: 1px solid #eaecf0 !important;
+}
+
+#listaLibros .informacion-libro > div {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+#listaLibros .informacion-libro > div:first-child {
+    border-right: 1px solid #eaecf0 !important;
+}
+
+
+/* TEXTO PRECIO / VENTAS */
+
+#listaLibros .informacion-libro span {
+    display: block !important;
+
+    color: #98a2b3 !important;
+
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    text-transform: uppercase !important;
+
+    margin-bottom: 5px !important;
+}
+
+
+/* NÚMEROS */
+
+#listaLibros .informacion-libro strong {
+    display: block !important;
+
+    color: #101828 !important;
+
+    font-size: 17px !important;
+    font-weight: 800 !important;
+}
+
+#listaLibros .informacion-libro > div:first-child strong {
+    color: #b7791f !important;
+}
+
+
+/* FECHA */
+
+#listaLibros .fecha-libro {
+    display: block !important;
+
+    background: #f8fafc !important;
+
+    color: #667085 !important;
+
+    padding: 11px 13px !important;
+
+    border-radius: 9px !important;
+
+    font-size: 14px !important;
+}
+
+
+/* ESPACIO DEL CATÁLOGO */
+
+.seccion-libros {
+    padding: 60px 0 90px !important;
+    background: #f5f7fa !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    #listaLibros .tarjeta-libro {
+        min-height: auto !important;
+    }
+
+    #listaLibros .nombre-libro {
+        min-height: auto !important;
+    }
+}
+/* =========================================================
+   PÁGINA DE AUTORES
+========================================================= */
+
+.seccion-autores {
+    background: #f5f7fa;
+    padding: 55px 0 80px;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   BARRA SUPERIOR AUTORES
+========================================================= */
+
+.barra-autores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.barra-autores h2 {
+    color: #101828;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.barra-autores p {
+    color: #667085;
+    margin: 0;
+}
+
+.barra-autores p strong {
+    color: #b7791f;
+}
+
+
+/* =========================================================
+   BUSCADOR DE AUTORES
+========================================================= */
+
+.buscador-autores {
+    width: 100%;
+    max-width: 420px;
+}
+
+.buscador-autores input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #d0d5dd;
+    border-radius: 12px;
+    padding: 0 18px;
+    background: #ffffff;
+    color: #101828;
+    font-size: 0.95rem;
+    box-shadow: 0 5px 15px rgba(16, 24, 40, 0.05);
+    transition: all 0.3s ease;
+}
+
+.buscador-autores input:focus {
+    border-color: #f4b942;
+    box-shadow: 0 0 0 4px rgba(244, 185, 66, 0.15);
+    outline: none;
+}
+
+
+/* =========================================================
+   CONTENEDOR DE CADA AUTOR
+========================================================= */
+
+.autor-contenedor {
+    display: flex;
+}
+
+
+/* =========================================================
+   TARJETA DEL AUTOR
+========================================================= */
+
+.tarjeta-autor {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #eaecf0;
+    box-shadow: 0 8px 25px rgba(16, 24, 40, 0.08);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-autor:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.15);
+}
+
+
+/* =========================================================
+   PARTE OSCURA DE LA TARJETA
+========================================================= */
+
+.autor-superior {
+    height: 150px;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,0.06) 0,
+            rgba(255,255,255,0.06) 55px,
+            transparent 56px
+        ),
+        linear-gradient(
+            135deg,
+            #101828,
+            #25344a
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* círculo decorativo */
+
+.autor-superior::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    right: -35px;
+    bottom: -55px;
+    background: rgba(244, 185, 66, 0.10);
+}
+
+
+/* =========================================================
+   AVATAR CON INICIALES
+========================================================= */
+
+.avatar-autor {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+
+    color: #101828;
+
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    border: 4px solid rgba(244, 185, 66, 0.85);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL AUTOR
+========================================================= */
+
+.contenido-autor {
+    padding: 28px 25px 25px;
+}
+
+
+/* etiqueta AUTOR */
+
+.etiqueta-autor {
+    display: inline-block;
+
+    background: #fff4d6;
+    color: #9a6700;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 0.70rem;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+/* nombre */
+
+.nombre-autor {
+    color: #101828;
+
+    font-size: 1.35rem;
+
+    font-weight: 800;
+
+    margin-bottom: 22px;
+
+    line-height: 1.3;
+
+    min-height: 52px;
+}
+
+
+/* =========================================================
+   DATOS DEL AUTOR
+========================================================= */
+
+.datos-autor {
+    border-top: 1px solid #eaecf0;
+    padding-top: 15px;
+}
+
+.dato-autor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.dato-autor:last-child {
+    border-bottom: none;
+}
+
+.dato-autor span {
+    color: #98a2b3;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.dato-autor strong {
+    color: #344054;
+    font-size: 0.86rem;
+    font-weight: 700;
+
+    text-align: right;
+
+    max-width: 55%;
+}
+
+
+/* =========================================================
+   MENSAJE SIN AUTORES
+========================================================= */
+
+#sinAutores {
+    background: #ffffff;
+    border-radius: 16px;
+    margin-top: 25px;
+    border: 1px solid #eaecf0;
+}
+
+#sinAutores h3 {
+    color: #101828;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE AUTORES
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .barra-autores {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buscador-autores {
+        max-width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .seccion-autores {
+        padding: 40px 0 60px;
+    }
+
+    .barra-autores h2 {
+        font-size: 1.7rem;
+    }
+
+    .autor-superior {
+        height: 135px;
+    }
+
+    .avatar-autor {
+        width: 75px;
+        height: 75px;
+        font-size: 1.5rem;
+    }
+
+    .contenido-autor {
+        padding: 22px 20px;
+    }
+
+    .nombre-autor {
+        min-height: auto;
+    }
+
+}
+/* =========================================================
+   PÁGINA DE CONTACTO
+========================================================= */
+
+.encabezado-contacto {
+    background: linear-gradient(135deg, #101828, #25344a);
+    padding: 70px 0 65px;
+    color: white;
+    text-align: center;
+}
+
+.subtitulo-contacto {
+    display: inline-block;
+    color: #f4b942;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.encabezado-contacto h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.encabezado-contacto p {
+    color: #d0d5dd;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECCIÓN PRINCIPAL
+========================================================= */
+
+.seccion-contacto {
+    background: #f5f7fa;
+    padding: 75px 0;
+    min-height: 600px;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DE CONTACTO
+========================================================= */
+
+.informacion-contacto {
+    background: linear-gradient(145deg, #101828, #1d2939);
+    border-radius: 20px;
+    padding: 45px 40px;
+    height: 100%;
+    color: white;
+    box-shadow: 0 15px 40px rgba(16, 24, 40, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.informacion-contacto::after {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background: rgba(244, 185, 66, 0.08);
+    right: -70px;
+    bottom: -70px;
+}
+
+.etiqueta-contacto {
+    display: inline-block;
+    background: rgba(244, 185, 66, 0.15);
+    border: 1px solid rgba(244, 185, 66, 0.35);
+    color: #f4b942;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.informacion-contacto h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.descripcion-contacto {
+    color: #d0d5dd;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   DATOS: CORREO, TELÉFONO Y HORARIO
+========================================================= */
+
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.icono-contacto {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: rgba(244, 185, 66, 0.13);
+    border: 1px solid rgba(244, 185, 66, 0.25);
+
+    font-size: 1.3rem;
+}
+
+.dato-contacto div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.dato-contacto span {
+    color: #98a2b3;
+    font-size: 0.78rem;
+    margin-bottom: 4px;
+}
+
+.dato-contacto strong {
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   TARJETA DEL FORMULARIO
+========================================================= */
+
+.tarjeta-formulario {
+    background: white;
+    border: 1px solid #eaecf0;
+    border-radius: 20px;
+    padding: 45px;
+    height: 100%;
+
+    box-shadow:
+        0 10px 35px rgba(16, 24, 40, 0.08);
+}
+
+.encabezado-formulario {
+    margin-bottom: 30px;
+}
+
+.encabezado-formulario h2 {
+    color: #101828;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 7px;
+}
+
+.encabezado-formulario p {
+    color: #667085;
+    margin: 0;
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.tarjeta-formulario .form-label {
+    color: #344054;
+    font-weight: 700;
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CAMPOS
+========================================================= */
+
+.campo-contacto {
+    border: 1px solid #d0d5dd !important;
+    border-radius: 10px !important;
+    background: #f9fafb !important;
+
+    padding: 13px 15px !important;
+
+    font-size: 0.95rem;
+
+    color: #101828;
+
+    box-shadow: none !important;
+
+    transition: all 0.25s ease;
+}
+
+input.campo-contacto {
+    height: 50px;
+}
+
+textarea.campo-contacto {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.campo-contacto:focus {
+    background: white !important;
+    border-color: #f4b942 !important;
+
+    box-shadow:
+        0 0 0 4px rgba(244, 185, 66, 0.15) !important;
+}
+
+.campo-contacto::placeholder {
+    color: #98a2b3;
+}
+
+
+/* =========================================================
+   BOTÓN ENVIAR
+========================================================= */
+
+.btn-enviar-contacto {
+    width: 100%;
+
+    background: #f4b942;
+    color: #101828;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 15px 25px;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(244, 185, 66, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.btn-enviar-contacto:hover {
+    background: #ffc857;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(244, 185, 66, 0.35);
+}
+
+
+/* =========================================================
+   RESPONSIVE CONTACTO
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .informacion-contacto {
+        padding: 35px 30px;
+    }
+
+    .tarjeta-formulario {
+        padding: 35px 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .encabezado-contacto {
+        padding: 50px 20px;
+    }
+
+    .encabezado-contacto h1 {
+        font-size: 2.2rem;
+    }
+
+    .encabezado-contacto p {
+        font-size: 0.95rem;
+    }
+
+    .seccion-contacto {
+        padding: 45px 0;
+    }
+
+    .informacion-contacto {
+        padding: 30px 25px;
+    }
+
+    .informacion-contacto h2 {
+        font-size: 1.8rem;
+    }
+
+    .tarjeta-formulario {
+        padding: 30px 22px;
+    }
+
+    .encabezado-formulario h2 {
+        font-size: 1.7rem;
+    }
+}
